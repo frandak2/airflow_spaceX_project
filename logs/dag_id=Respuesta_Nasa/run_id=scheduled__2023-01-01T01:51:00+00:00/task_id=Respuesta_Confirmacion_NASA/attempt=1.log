@@ -1,0 +1,29 @@
+[2023-01-24 02:43:31,571] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Respuesta_Nasa.Respuesta_Confirmacion_NASA scheduled__2023-01-01T01:51:00+00:00 [queued]>
+[2023-01-24 02:43:31,582] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Respuesta_Nasa.Respuesta_Confirmacion_NASA scheduled__2023-01-01T01:51:00+00:00 [queued]>
+[2023-01-24 02:43:31,582] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-24 02:43:31,582] {taskinstance.py:1377} INFO - Starting attempt 1 of 2
+[2023-01-24 02:43:31,583] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-24 02:43:31,597] {taskinstance.py:1397} INFO - Executing <Task(BashOperator): Respuesta_Confirmacion_NASA> on 2023-01-01 01:51:00+00:00
+[2023-01-24 02:43:31,602] {standard_task_runner.py:52} INFO - Started process 1896 to run task
+[2023-01-24 02:43:31,605] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Respuesta_Nasa', 'Respuesta_Confirmacion_NASA', 'scheduled__2023-01-01T01:51:00+00:00', '--job-id', '306', '--raw', '--subdir', 'DAGS_FOLDER/00-ETL_spaceX.py', '--cfg-path', '/tmp/tmp1xtvyv8t', '--error-file', '/tmp/tmpkhnhnqsv']
+[2023-01-24 02:43:31,606] {standard_task_runner.py:80} INFO - Job 306: Subtask Respuesta_Confirmacion_NASA
+[2023-01-24 02:43:31,673] {task_command.py:371} INFO - Running <TaskInstance: Respuesta_Nasa.Respuesta_Confirmacion_NASA scheduled__2023-01-01T01:51:00+00:00 [running]> on host fd9891b969b0
+[2023-01-24 02:43:31,754] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=me
+AIRFLOW_CTX_DAG_ID=Respuesta_Nasa
+AIRFLOW_CTX_TASK_ID=Respuesta_Confirmacion_NASA
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-01T01:51:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-01T01:51:00+00:00
+[2023-01-24 02:43:31,755] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2023-01-24 02:43:31,756] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'sleep 20 && echo "Confirmación de la NASA, pueden proceder" > /tmp/response_20230101.txt']
+[2023-01-24 02:43:31,766] {subprocess.py:85} INFO - Output:
+[2023-01-24 02:43:51,780] {subprocess.py:96} INFO - Command exited with return code 0
+[2023-01-24 02:43:51,938] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=Respuesta_Nasa, task_id=Respuesta_Confirmacion_NASA, execution_date=20230101T015100, start_date=20230124T024331, end_date=20230124T024351
+[2023-01-24 02:43:52,003] {local_task_job.py:221} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2023-01-24 02:43:52,007] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 1896. PIDs of all processes in the group: [1896]
+[2023-01-24 02:43:52,008] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 1896
+[2023-01-24 02:43:52,079] {process_utils.py:75} INFO - Process psutil.Process(pid=1896, status='terminated', exitcode=0, started='02:43:30') (1896) terminated with exit code 0

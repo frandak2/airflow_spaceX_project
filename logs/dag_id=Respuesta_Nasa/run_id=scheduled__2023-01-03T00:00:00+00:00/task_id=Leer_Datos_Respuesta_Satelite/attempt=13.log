@@ -1,0 +1,49 @@
+[2023-01-26 18:08:44,969] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Respuesta_Nasa.Leer_Datos_Respuesta_Satelite scheduled__2023-01-03T00:00:00+00:00 [queued]>
+[2023-01-26 18:08:44,984] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Respuesta_Nasa.Leer_Datos_Respuesta_Satelite scheduled__2023-01-03T00:00:00+00:00 [queued]>
+[2023-01-26 18:08:44,984] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-26 18:08:44,985] {taskinstance.py:1377} INFO - Starting attempt 13 of 15
+[2023-01-26 18:08:44,985] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-26 18:08:45,001] {taskinstance.py:1397} INFO - Executing <Task(BashOperator): Leer_Datos_Respuesta_Satelite> on 2023-01-03 00:00:00+00:00
+[2023-01-26 18:08:45,006] {standard_task_runner.py:52} INFO - Started process 1006 to run task
+[2023-01-26 18:08:45,009] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Respuesta_Nasa', 'Leer_Datos_Respuesta_Satelite', 'scheduled__2023-01-03T00:00:00+00:00', '--job-id', '667', '--raw', '--subdir', 'DAGS_FOLDER/00-ETL_spaceX.py', '--cfg-path', '/tmp/tmpx6mu0e_c', '--error-file', '/tmp/tmpht1rlsoi']
+[2023-01-26 18:08:45,010] {standard_task_runner.py:80} INFO - Job 667: Subtask Leer_Datos_Respuesta_Satelite
+[2023-01-26 18:08:45,086] {task_command.py:371} INFO - Running <TaskInstance: Respuesta_Nasa.Leer_Datos_Respuesta_Satelite scheduled__2023-01-03T00:00:00+00:00 [running]> on host da6de88268cf
+[2023-01-26 18:08:45,173] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=frandak2@gmail.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Respuesta_Nasa
+AIRFLOW_CTX_TASK_ID=Leer_Datos_Respuesta_Satelite
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-03T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=13
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-03T00:00:00+00:00
+[2023-01-26 18:08:45,174] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2023-01-26 18:08:45,175] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'ls /tmp && head /tmp/platzi_data_20230103.csv']
+[2023-01-26 18:08:45,186] {subprocess.py:85} INFO - Output:
+[2023-01-26 18:08:45,189] {subprocess.py:92} INFO - ***tmp4tn52udn
+[2023-01-26 18:08:45,189] {subprocess.py:92} INFO - platzi_data_20230101.csv
+[2023-01-26 18:08:45,190] {subprocess.py:92} INFO - platzi_data_20230102.csv
+[2023-01-26 18:08:45,190] {subprocess.py:92} INFO - platzi_data_20230103.csv
+[2023-01-26 18:08:45,190] {subprocess.py:92} INFO - pymp-ysubsmu7
+[2023-01-26 18:08:45,190] {subprocess.py:92} INFO - response_20230101.txt
+[2023-01-26 18:08:45,190] {subprocess.py:92} INFO - response_20230102.txt
+[2023-01-26 18:08:45,190] {subprocess.py:92} INFO - response_20230103.txt
+[2023-01-26 18:08:45,190] {subprocess.py:92} INFO - spacex_20230101.json
+[2023-01-26 18:08:45,190] {subprocess.py:92} INFO - spacex_20230102.json
+[2023-01-26 18:08:45,191] {subprocess.py:92} INFO - spacex_20230103.json
+[2023-01-26 18:08:45,191] {subprocess.py:92} INFO - tmp9i27p4m0
+[2023-01-26 18:08:45,191] {subprocess.py:92} INFO - tmpht1rlsoi
+[2023-01-26 18:08:45,191] {subprocess.py:92} INFO - tmpmoze8fie
+[2023-01-26 18:08:45,191] {subprocess.py:92} INFO - tmpnvc2r2ky
+[2023-01-26 18:08:45,191] {subprocess.py:92} INFO - ,student,timestamp
+[2023-01-26 18:08:45,191] {subprocess.py:92} INFO - 0,Maria Cruz,20230103
+[2023-01-26 18:08:45,191] {subprocess.py:92} INFO - 1,Daniel Crema,20230103
+[2023-01-26 18:08:45,191] {subprocess.py:92} INFO - 2,Elon Musk,20230103
+[2023-01-26 18:08:45,191] {subprocess.py:92} INFO - 3,Karol Castrejon,20230103
+[2023-01-26 18:08:45,192] {subprocess.py:92} INFO - 4,Freddy Vega,20230103
+[2023-01-26 18:08:45,192] {subprocess.py:96} INFO - Command exited with return code 0
+[2023-01-26 18:08:45,224] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=Respuesta_Nasa, task_id=Leer_Datos_Respuesta_Satelite, execution_date=20230103T000000, start_date=20230126T180844, end_date=20230126T180845
+[2023-01-26 18:08:45,261] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-01-26 18:08:45,317] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

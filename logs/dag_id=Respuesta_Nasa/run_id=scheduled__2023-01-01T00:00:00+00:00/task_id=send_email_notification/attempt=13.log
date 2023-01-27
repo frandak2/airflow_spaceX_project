@@ -1,0 +1,44 @@
+[2023-01-26 17:53:13,807] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Respuesta_Nasa.send_email_notification scheduled__2023-01-01T00:00:00+00:00 [queued]>
+[2023-01-26 17:53:13,821] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Respuesta_Nasa.send_email_notification scheduled__2023-01-01T00:00:00+00:00 [queued]>
+[2023-01-26 17:53:13,821] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-26 17:53:13,821] {taskinstance.py:1377} INFO - Starting attempt 13 of 15
+[2023-01-26 17:53:13,821] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-26 17:53:13,837] {taskinstance.py:1397} INFO - Executing <Task(EmailOperator): send_email_notification> on 2023-01-01 00:00:00+00:00
+[2023-01-26 17:53:13,843] {standard_task_runner.py:52} INFO - Started process 145 to run task
+[2023-01-26 17:53:13,846] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Respuesta_Nasa', 'send_email_notification', 'scheduled__2023-01-01T00:00:00+00:00', '--job-id', '630', '--raw', '--subdir', 'DAGS_FOLDER/00-ETL_spaceX.py', '--cfg-path', '/tmp/tmpw0qtuivz', '--error-file', '/tmp/tmpw6khdfqv']
+[2023-01-26 17:53:13,847] {standard_task_runner.py:80} INFO - Job 630: Subtask send_email_notification
+[2023-01-26 17:53:13,917] {task_command.py:371} INFO - Running <TaskInstance: Respuesta_Nasa.send_email_notification scheduled__2023-01-01T00:00:00+00:00 [running]> on host da6de88268cf
+[2023-01-26 17:53:14,007] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Respuesta_Nasa
+AIRFLOW_CTX_TASK_ID=send_email_notification
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=13
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-01T00:00:00+00:00
+[2023-01-26 17:53:14,017] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/email.py:119: PendingDeprecationWarning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+  send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+
+[2023-01-26 17:53:14,018] {email.py:228} INFO - Email alerting: attempt 1
+[2023-01-26 17:53:15,236] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/email.py", line 85, in execute
+    custom_headers=self.custom_headers,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/email.py", line 71, in send_email
+    **kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/email.py", line 119, in send_email_smtp
+    send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/email.py", line 239, in send_mime_email
+    smtp_conn.login(smtp_user, smtp_password)
+  File "/usr/local/lib/python3.7/smtplib.py", line 735, in login
+    raise last_exception
+  File "/usr/local/lib/python3.7/smtplib.py", line 726, in login
+    initial_response_ok=initial_response_ok)
+  File "/usr/local/lib/python3.7/smtplib.py", line 647, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials h5-20020ac85845000000b003a70a675066sm1119838qth.79 - gsmtp')
+[2023-01-26 17:53:15,254] {taskinstance.py:1420} INFO - Marking task as UP_FOR_RETRY. dag_id=Respuesta_Nasa, task_id=send_email_notification, execution_date=20230101T000000, start_date=20230126T175313, end_date=20230126T175315
+[2023-01-26 17:53:15,277] {standard_task_runner.py:97} ERROR - Failed to execute job 630 for task send_email_notification ((535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials h5-20020ac85845000000b003a70a675066sm1119838qth.79 - gsmtp'); 145)
+[2023-01-26 17:53:15,303] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-01-26 17:53:15,340] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

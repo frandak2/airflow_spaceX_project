@@ -1,0 +1,47 @@
+[2023-01-24 02:43:19,865] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Respuesta_Nasa.Leer_Datos_Respuesta_Nasa scheduled__2023-01-01T01:29:00+00:00 [queued]>
+[2023-01-24 02:43:19,889] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Respuesta_Nasa.Leer_Datos_Respuesta_Nasa scheduled__2023-01-01T01:29:00+00:00 [queued]>
+[2023-01-24 02:43:19,894] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-24 02:43:19,894] {taskinstance.py:1377} INFO - Starting attempt 1 of 2
+[2023-01-24 02:43:19,894] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-24 02:43:19,924] {taskinstance.py:1397} INFO - Executing <Task(BashOperator): Leer_Datos_Respuesta_Nasa> on 2023-01-01 01:29:00+00:00
+[2023-01-24 02:43:19,947] {standard_task_runner.py:52} INFO - Started process 1713 to run task
+[2023-01-24 02:43:19,953] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Respuesta_Nasa', 'Leer_Datos_Respuesta_Nasa', 'scheduled__2023-01-01T01:29:00+00:00', '--job-id', '272', '--raw', '--subdir', 'DAGS_FOLDER/00-ETL_spaceX.py', '--cfg-path', '/tmp/tmpzpo918be', '--error-file', '/tmp/tmpxjsoy1ef']
+[2023-01-24 02:43:19,955] {standard_task_runner.py:80} INFO - Job 272: Subtask Leer_Datos_Respuesta_Nasa
+[2023-01-24 02:43:20,135] {task_command.py:371} INFO - Running <TaskInstance: Respuesta_Nasa.Leer_Datos_Respuesta_Nasa scheduled__2023-01-01T01:29:00+00:00 [running]> on host fd9891b969b0
+[2023-01-24 02:43:20,426] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=me
+AIRFLOW_CTX_DAG_ID=Respuesta_Nasa
+AIRFLOW_CTX_TASK_ID=Leer_Datos_Respuesta_Nasa
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-01T01:29:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-01T01:29:00+00:00
+[2023-01-24 02:43:20,431] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2023-01-24 02:43:20,431] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'ls /tmp && head /tmp/response_20230101.txt']
+[2023-01-24 02:43:20,456] {subprocess.py:85} INFO - Output:
+[2023-01-24 02:43:20,469] {subprocess.py:92} INFO - ***tmp1j6y7bs5
+[2023-01-24 02:43:20,469] {subprocess.py:92} INFO - ***tmp3kdbcur0
+[2023-01-24 02:43:20,469] {subprocess.py:92} INFO - ***tmpdcm1x8t8
+[2023-01-24 02:43:20,469] {subprocess.py:92} INFO - ***tmpgoyox8lv
+[2023-01-24 02:43:20,470] {subprocess.py:92} INFO - ***tmpx_lu9__0
+[2023-01-24 02:43:20,470] {subprocess.py:92} INFO - pymp-igsi0xnb
+[2023-01-24 02:43:20,470] {subprocess.py:92} INFO - response_20230101.txt
+[2023-01-24 02:43:20,470] {subprocess.py:92} INFO - spacex_20230101.json
+[2023-01-24 02:43:20,470] {subprocess.py:92} INFO - tmp5uktybnb
+[2023-01-24 02:43:20,470] {subprocess.py:92} INFO - tmp64gikcnd
+[2023-01-24 02:43:20,471] {subprocess.py:92} INFO - tmp69dox8cn
+[2023-01-24 02:43:20,471] {subprocess.py:92} INFO - tmp6k66jhoz
+[2023-01-24 02:43:20,471] {subprocess.py:92} INFO - tmpec_s5kla
+[2023-01-24 02:43:20,471] {subprocess.py:92} INFO - tmphg4670pb
+[2023-01-24 02:43:20,471] {subprocess.py:92} INFO - tmphysrvr8x
+[2023-01-24 02:43:20,471] {subprocess.py:92} INFO - tmpn8chuo39
+[2023-01-24 02:43:20,471] {subprocess.py:92} INFO - tmpnvc2r2ky
+[2023-01-24 02:43:20,472] {subprocess.py:92} INFO - tmpqwk_wuux
+[2023-01-24 02:43:20,472] {subprocess.py:92} INFO - tmpxjsoy1ef
+[2023-01-24 02:43:20,474] {subprocess.py:92} INFO - Confirmación de la NASA, pueden proceder
+[2023-01-24 02:43:20,474] {subprocess.py:96} INFO - Command exited with return code 0
+[2023-01-24 02:43:20,633] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=Respuesta_Nasa, task_id=Leer_Datos_Respuesta_Nasa, execution_date=20230101T012900, start_date=20230124T024319, end_date=20230124T024320
+[2023-01-24 02:43:20,671] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-01-24 02:43:20,749] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,46 @@
+[2023-01-25 23:15:12,883] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Respuesta_Nasa.Leer_Datos_Respuesta_Nasa scheduled__2023-01-03T00:00:00+00:00 [queued]>
+[2023-01-25 23:15:12,897] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Respuesta_Nasa.Leer_Datos_Respuesta_Nasa scheduled__2023-01-03T00:00:00+00:00 [queued]>
+[2023-01-25 23:15:12,898] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-25 23:15:12,898] {taskinstance.py:1377} INFO - Starting attempt 3 of 5
+[2023-01-25 23:15:12,898] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-25 23:15:12,914] {taskinstance.py:1397} INFO - Executing <Task(BashOperator): Leer_Datos_Respuesta_Nasa> on 2023-01-03 00:00:00+00:00
+[2023-01-25 23:15:12,920] {standard_task_runner.py:52} INFO - Started process 3480 to run task
+[2023-01-25 23:15:12,924] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Respuesta_Nasa', 'Leer_Datos_Respuesta_Nasa', 'scheduled__2023-01-03T00:00:00+00:00', '--job-id', '469', '--raw', '--subdir', 'DAGS_FOLDER/00-ETL_spaceX.py', '--cfg-path', '/tmp/tmpf3d_zdos', '--error-file', '/tmp/tmpjue7p2x7']
+[2023-01-25 23:15:12,925] {standard_task_runner.py:80} INFO - Job 469: Subtask Leer_Datos_Respuesta_Nasa
+[2023-01-25 23:15:12,999] {task_command.py:371} INFO - Running <TaskInstance: Respuesta_Nasa.Leer_Datos_Respuesta_Nasa scheduled__2023-01-03T00:00:00+00:00 [running]> on host fd9891b969b0
+[2023-01-25 23:15:13,074] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=me
+AIRFLOW_CTX_DAG_ID=Respuesta_Nasa
+AIRFLOW_CTX_TASK_ID=Leer_Datos_Respuesta_Nasa
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-03T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=3
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-03T00:00:00+00:00
+[2023-01-25 23:15:13,075] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2023-01-25 23:15:13,075] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'ls /tmp && head /tmp/response_20230103.txt']
+[2023-01-25 23:15:13,086] {subprocess.py:85} INFO - Output:
+[2023-01-25 23:15:13,093] {subprocess.py:92} INFO - ***tmp3v79qj1f
+[2023-01-25 23:15:13,093] {subprocess.py:92} INFO - ***tmp4wg5ypd5
+[2023-01-25 23:15:13,093] {subprocess.py:92} INFO - ***tmpi93zggvi
+[2023-01-25 23:15:13,093] {subprocess.py:92} INFO - platzi_data_20210101.csv
+[2023-01-25 23:15:13,093] {subprocess.py:92} INFO - platzi_data_{{ds_nodash}}.csv
+[2023-01-25 23:15:13,094] {subprocess.py:92} INFO - pymp-183zsj8a
+[2023-01-25 23:15:13,094] {subprocess.py:92} INFO - pymp-_z20wx4h
+[2023-01-25 23:15:13,094] {subprocess.py:92} INFO - pymp-igsi0xnb
+[2023-01-25 23:15:13,094] {subprocess.py:92} INFO - response_20230101.txt
+[2023-01-25 23:15:13,094] {subprocess.py:92} INFO - response_20230102.txt
+[2023-01-25 23:15:13,094] {subprocess.py:92} INFO - response_20230103.txt
+[2023-01-25 23:15:13,094] {subprocess.py:92} INFO - spacex_20230101.json
+[2023-01-25 23:15:13,094] {subprocess.py:92} INFO - spacex_20230102.json
+[2023-01-25 23:15:13,095] {subprocess.py:92} INFO - spacex_20230103.json
+[2023-01-25 23:15:13,095] {subprocess.py:92} INFO - tmpjsnl_d8t
+[2023-01-25 23:15:13,095] {subprocess.py:92} INFO - tmpjue7p2x7
+[2023-01-25 23:15:13,095] {subprocess.py:92} INFO - tmpnvc2r2ky
+[2023-01-25 23:15:13,095] {subprocess.py:92} INFO - tmps6ec032x
+[2023-01-25 23:15:13,097] {subprocess.py:92} INFO - Confirmación de la NASA, pueden proceder
+[2023-01-25 23:15:13,097] {subprocess.py:96} INFO - Command exited with return code 0
+[2023-01-25 23:15:13,130] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=Respuesta_Nasa, task_id=Leer_Datos_Respuesta_Nasa, execution_date=20230103T000000, start_date=20230125T231512, end_date=20230125T231513
+[2023-01-25 23:15:13,175] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-01-25 23:15:13,223] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

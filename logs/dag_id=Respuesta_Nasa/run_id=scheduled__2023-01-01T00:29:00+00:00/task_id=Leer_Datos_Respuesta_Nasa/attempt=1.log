@@ -1,0 +1,48 @@
+[2023-01-24 02:41:03,641] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Respuesta_Nasa.Leer_Datos_Respuesta_Nasa scheduled__2023-01-01T00:29:00+00:00 [queued]>
+[2023-01-24 02:41:03,692] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Respuesta_Nasa.Leer_Datos_Respuesta_Nasa scheduled__2023-01-01T00:29:00+00:00 [queued]>
+[2023-01-24 02:41:03,692] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-24 02:41:03,693] {taskinstance.py:1377} INFO - Starting attempt 1 of 2
+[2023-01-24 02:41:03,693] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-24 02:41:03,727] {taskinstance.py:1397} INFO - Executing <Task(BashOperator): Leer_Datos_Respuesta_Nasa> on 2023-01-01 00:29:00+00:00
+[2023-01-24 02:41:03,734] {standard_task_runner.py:52} INFO - Started process 610 to run task
+[2023-01-24 02:41:03,743] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Respuesta_Nasa', 'Leer_Datos_Respuesta_Nasa', 'scheduled__2023-01-01T00:29:00+00:00', '--job-id', '83', '--raw', '--subdir', 'DAGS_FOLDER/00-ETL_spaceX.py', '--cfg-path', '/tmp/tmpsw65mwk7', '--error-file', '/tmp/tmphnk9urxh']
+[2023-01-24 02:41:03,745] {standard_task_runner.py:80} INFO - Job 83: Subtask Leer_Datos_Respuesta_Nasa
+[2023-01-24 02:41:03,970] {task_command.py:371} INFO - Running <TaskInstance: Respuesta_Nasa.Leer_Datos_Respuesta_Nasa scheduled__2023-01-01T00:29:00+00:00 [running]> on host fd9891b969b0
+[2023-01-24 02:41:04,369] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=me
+AIRFLOW_CTX_DAG_ID=Respuesta_Nasa
+AIRFLOW_CTX_TASK_ID=Leer_Datos_Respuesta_Nasa
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-01T00:29:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-01T00:29:00+00:00
+[2023-01-24 02:41:04,377] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2023-01-24 02:41:04,377] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'ls /tmp && head /tmp/response_20230101.txt']
+[2023-01-24 02:41:04,412] {subprocess.py:85} INFO - Output:
+[2023-01-24 02:41:04,435] {subprocess.py:92} INFO - ***tmp1mklexqj
+[2023-01-24 02:41:04,435] {subprocess.py:92} INFO - ***tmpdx8hxxzh
+[2023-01-24 02:41:04,436] {subprocess.py:92} INFO - ***tmpnkuv3yxy
+[2023-01-24 02:41:04,436] {subprocess.py:92} INFO - ***tmptfltize9
+[2023-01-24 02:41:04,436] {subprocess.py:92} INFO - pymp-igsi0xnb
+[2023-01-24 02:41:04,436] {subprocess.py:92} INFO - response_20230101.txt
+[2023-01-24 02:41:04,436] {subprocess.py:92} INFO - spacex_20230101.json
+[2023-01-24 02:41:04,436] {subprocess.py:92} INFO - tmp2__czpkm
+[2023-01-24 02:41:04,436] {subprocess.py:92} INFO - tmp6mydeqsv
+[2023-01-24 02:41:04,436] {subprocess.py:92} INFO - tmpatyo79dp
+[2023-01-24 02:41:04,436] {subprocess.py:92} INFO - tmpcgitn3sa
+[2023-01-24 02:41:04,437] {subprocess.py:92} INFO - tmpfafo1lpo
+[2023-01-24 02:41:04,437] {subprocess.py:92} INFO - tmpfx60_0wg
+[2023-01-24 02:41:04,437] {subprocess.py:92} INFO - tmpgjembwap
+[2023-01-24 02:41:04,437] {subprocess.py:92} INFO - tmphnk9urxh
+[2023-01-24 02:41:04,437] {subprocess.py:92} INFO - tmpnvc2r2ky
+[2023-01-24 02:41:04,437] {subprocess.py:92} INFO - tmppdal1gwd
+[2023-01-24 02:41:04,437] {subprocess.py:92} INFO - tmpyt1261cd
+[2023-01-24 02:41:04,437] {subprocess.py:92} INFO - tmpzfgksomr
+[2023-01-24 02:41:04,437] {subprocess.py:92} INFO - tmpzr_8x_ie
+[2023-01-24 02:41:04,440] {subprocess.py:92} INFO - Confirmación de la NASA, pueden proceder
+[2023-01-24 02:41:04,441] {subprocess.py:96} INFO - Command exited with return code 0
+[2023-01-24 02:41:04,539] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=Respuesta_Nasa, task_id=Leer_Datos_Respuesta_Nasa, execution_date=20230101T002900, start_date=20230124T024103, end_date=20230124T024104
+[2023-01-24 02:41:04,608] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-01-24 02:41:04,800] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

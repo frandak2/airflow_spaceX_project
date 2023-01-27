@@ -1,0 +1,29 @@
+[2023-01-27T16:51:23.698+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: Respuesta_Nasa.not_exists_files scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-27T16:51:23.719+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: Respuesta_Nasa.not_exists_files scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-27T16:51:23.719+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-27T16:51:23.719+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 3
+[2023-01-27T16:51:23.719+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-27T16:51:23.735+0000] {taskinstance.py:1383} INFO - Executing <Task(BashOperator): not_exists_files> on 2023-01-02 00:00:00+00:00
+[2023-01-27T16:51:23.740+0000] {standard_task_runner.py:55} INFO - Started process 4562 to run task
+[2023-01-27T16:51:23.744+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Respuesta_Nasa', 'not_exists_files', 'scheduled__2023-01-02T00:00:00+00:00', '--job-id', '752', '--raw', '--subdir', 'DAGS_FOLDER/00-ETL_spaceX.py', '--cfg-path', '/tmp/tmpxoaf823h']
+[2023-01-27T16:51:23.746+0000] {standard_task_runner.py:83} INFO - Job 752: Subtask not_exists_files
+[2023-01-27T16:51:23.809+0000] {task_command.py:376} INFO - Running <TaskInstance: Respuesta_Nasa.not_exists_files scheduled__2023-01-02T00:00:00+00:00 [running]> on host 3ceae0e2b238
+[2023-01-27T16:51:23.885+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=frandak2@gmail.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Respuesta_Nasa
+AIRFLOW_CTX_TASK_ID=not_exists_files
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-02T00:00:00+00:00
+[2023-01-27T16:51:23.887+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-01-27T16:51:23.887+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo at 2023-01-02 the files not exists']
+[2023-01-27T16:51:23.899+0000] {subprocess.py:86} INFO - Output:
+[2023-01-27T16:51:23.901+0000] {subprocess.py:93} INFO - at 2023-01-02 the files not exists
+[2023-01-27T16:51:23.901+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-01-27T16:51:23.929+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=Respuesta_Nasa, task_id=not_exists_files, execution_date=20230102T000000, start_date=20230127T165123, end_date=20230127T165123
+[2023-01-27T16:51:23.956+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-27T16:51:23.974+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check

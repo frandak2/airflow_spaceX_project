@@ -1,0 +1,30 @@
+[2023-01-24 02:43:23,076] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Respuesta_Nasa.Obtener_Datos_SPACEX scheduled__2023-01-01T01:30:00+00:00 [queued]>
+[2023-01-24 02:43:23,098] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Respuesta_Nasa.Obtener_Datos_SPACEX scheduled__2023-01-01T01:30:00+00:00 [queued]>
+[2023-01-24 02:43:23,098] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-24 02:43:23,099] {taskinstance.py:1377} INFO - Starting attempt 1 of 2
+[2023-01-24 02:43:23,099] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-24 02:43:23,132] {taskinstance.py:1397} INFO - Executing <Task(BashOperator): Obtener_Datos_SPACEX> on 2023-01-01 01:30:00+00:00
+[2023-01-24 02:43:23,139] {standard_task_runner.py:52} INFO - Started process 1792 to run task
+[2023-01-24 02:43:23,144] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Respuesta_Nasa', 'Obtener_Datos_SPACEX', 'scheduled__2023-01-01T01:30:00+00:00', '--job-id', '285', '--raw', '--subdir', 'DAGS_FOLDER/00-ETL_spaceX.py', '--cfg-path', '/tmp/tmp5b1y9vd4', '--error-file', '/tmp/tmpngvsmsbo']
+[2023-01-24 02:43:23,146] {standard_task_runner.py:80} INFO - Job 285: Subtask Obtener_Datos_SPACEX
+[2023-01-24 02:43:23,436] {task_command.py:371} INFO - Running <TaskInstance: Respuesta_Nasa.Obtener_Datos_SPACEX scheduled__2023-01-01T01:30:00+00:00 [running]> on host fd9891b969b0
+[2023-01-24 02:43:23,697] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=me
+AIRFLOW_CTX_DAG_ID=Respuesta_Nasa
+AIRFLOW_CTX_TASK_ID=Obtener_Datos_SPACEX
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-01T01:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-01T01:30:00+00:00
+[2023-01-24 02:43:23,699] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2023-01-24 02:43:23,701] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'curl https://api.spacexdata.com/v4/launches/past > /tmp/spacex_20230101.json']
+[2023-01-24 02:43:23,719] {subprocess.py:85} INFO - Output:
+[2023-01-24 02:43:23,732] {subprocess.py:92} INFO -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2023-01-24 02:43:23,732] {subprocess.py:92} INFO -                                  Dload  Upload   Total   Spent    Left  Speed
+[2023-01-24 02:43:24,787] {subprocess.py:92} INFO -   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  182k    0  182k    0     0   203k      0 --:--:-- --:--:-- --:--:--  203k100  406k    0  406k    0     0   385k      0 --:--:--  0:00:01 --:--:--  385k
+[2023-01-24 02:43:24,791] {subprocess.py:96} INFO - Command exited with return code 0
+[2023-01-24 02:43:24,854] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=Respuesta_Nasa, task_id=Obtener_Datos_SPACEX, execution_date=20230101T013000, start_date=20230124T024323, end_date=20230124T024324
+[2023-01-24 02:43:24,900] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-01-24 02:43:24,962] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

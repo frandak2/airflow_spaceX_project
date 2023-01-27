@@ -1,0 +1,28 @@
+[2023-01-26 16:39:10,202] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Respuesta_Nasa.Respuesta_Confirmacion_NASA scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-26 16:39:10,215] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Respuesta_Nasa.Respuesta_Confirmacion_NASA scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-26 16:39:10,215] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-26 16:39:10,215] {taskinstance.py:1377} INFO - Starting attempt 6 of 8
+[2023-01-26 16:39:10,215] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-26 16:39:10,231] {taskinstance.py:1397} INFO - Executing <Task(BashOperator): Respuesta_Confirmacion_NASA> on 2023-01-02 00:00:00+00:00
+[2023-01-26 16:39:10,237] {standard_task_runner.py:52} INFO - Started process 245 to run task
+[2023-01-26 16:39:10,243] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Respuesta_Nasa', 'Respuesta_Confirmacion_NASA', 'scheduled__2023-01-02T00:00:00+00:00', '--job-id', '537', '--raw', '--subdir', 'DAGS_FOLDER/00-ETL_spaceX.py', '--cfg-path', '/tmp/tmpptbqbblk', '--error-file', '/tmp/tmpmre17psx']
+[2023-01-26 16:39:10,246] {standard_task_runner.py:80} INFO - Job 537: Subtask Respuesta_Confirmacion_NASA
+[2023-01-26 16:39:10,326] {task_command.py:371} INFO - Running <TaskInstance: Respuesta_Nasa.Respuesta_Confirmacion_NASA scheduled__2023-01-02T00:00:00+00:00 [running]> on host 1e10284898e4
+[2023-01-26 16:39:10,406] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=me
+AIRFLOW_CTX_DAG_ID=Respuesta_Nasa
+AIRFLOW_CTX_TASK_ID=Respuesta_Confirmacion_NASA
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=6
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-02T00:00:00+00:00
+[2023-01-26 16:39:10,407] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2023-01-26 16:39:10,408] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'sleep 20 && echo "Confirmación de la NASA, pueden proceder" > /tmp/response_20230102.txt']
+[2023-01-26 16:39:10,419] {subprocess.py:85} INFO - Output:
+[2023-01-26 16:39:30,423] {subprocess.py:96} INFO - Command exited with return code 0
+[2023-01-26 16:39:30,515] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=Respuesta_Nasa, task_id=Respuesta_Confirmacion_NASA, execution_date=20230102T000000, start_date=20230126T163910, end_date=20230126T163930
+[2023-01-26 16:39:30,547] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-01-26 16:39:30,581] {dagrun.py:1081} ERROR - Failed to get task '<TaskInstance: Respuesta_Nasa.Notificar_Analistas scheduled__2023-01-02T00:00:00+00:00 [removed]>' for dag 'Respuesta_Nasa'. Marking it as removed.
+[2023-01-26 16:39:30,599] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

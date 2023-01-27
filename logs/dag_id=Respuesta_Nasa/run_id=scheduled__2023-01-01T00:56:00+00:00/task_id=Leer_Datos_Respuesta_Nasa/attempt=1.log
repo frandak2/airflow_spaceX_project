@@ -1,0 +1,43 @@
+[2023-01-24 02:42:10,515] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Respuesta_Nasa.Leer_Datos_Respuesta_Nasa scheduled__2023-01-01T00:56:00+00:00 [queued]>
+[2023-01-24 02:42:10,538] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Respuesta_Nasa.Leer_Datos_Respuesta_Nasa scheduled__2023-01-01T00:56:00+00:00 [queued]>
+[2023-01-24 02:42:10,539] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-24 02:42:10,539] {taskinstance.py:1377} INFO - Starting attempt 1 of 2
+[2023-01-24 02:42:10,539] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-24 02:42:10,574] {taskinstance.py:1397} INFO - Executing <Task(BashOperator): Leer_Datos_Respuesta_Nasa> on 2023-01-01 00:56:00+00:00
+[2023-01-24 02:42:10,594] {standard_task_runner.py:52} INFO - Started process 1127 to run task
+[2023-01-24 02:42:10,624] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Respuesta_Nasa', 'Leer_Datos_Respuesta_Nasa', 'scheduled__2023-01-01T00:56:00+00:00', '--job-id', '172', '--raw', '--subdir', 'DAGS_FOLDER/00-ETL_spaceX.py', '--cfg-path', '/tmp/tmp4_r_dhx9', '--error-file', '/tmp/tmpnr00lx1m']
+[2023-01-24 02:42:10,635] {standard_task_runner.py:80} INFO - Job 172: Subtask Leer_Datos_Respuesta_Nasa
+[2023-01-24 02:42:10,798] {task_command.py:371} INFO - Running <TaskInstance: Respuesta_Nasa.Leer_Datos_Respuesta_Nasa scheduled__2023-01-01T00:56:00+00:00 [running]> on host fd9891b969b0
+[2023-01-24 02:42:11,124] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=me
+AIRFLOW_CTX_DAG_ID=Respuesta_Nasa
+AIRFLOW_CTX_TASK_ID=Leer_Datos_Respuesta_Nasa
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-01T00:56:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-01T00:56:00+00:00
+[2023-01-24 02:42:11,126] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2023-01-24 02:42:11,127] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'ls /tmp && head /tmp/response_20230101.txt']
+[2023-01-24 02:42:11,161] {subprocess.py:85} INFO - Output:
+[2023-01-24 02:42:11,173] {subprocess.py:92} INFO - ***tmp0kl1lsb9
+[2023-01-24 02:42:11,173] {subprocess.py:92} INFO - ***tmpav0ww2q3
+[2023-01-24 02:42:11,173] {subprocess.py:92} INFO - ***tmpnlbfvjn6
+[2023-01-24 02:42:11,173] {subprocess.py:92} INFO - ***tmpvxwe2thy
+[2023-01-24 02:42:11,173] {subprocess.py:92} INFO - pymp-igsi0xnb
+[2023-01-24 02:42:11,174] {subprocess.py:92} INFO - response_20230101.txt
+[2023-01-24 02:42:11,174] {subprocess.py:92} INFO - spacex_20230101.json
+[2023-01-24 02:42:11,174] {subprocess.py:92} INFO - tmp1hkw2sns
+[2023-01-24 02:42:11,174] {subprocess.py:92} INFO - tmpb7kqghbf
+[2023-01-24 02:42:11,174] {subprocess.py:92} INFO - tmpgdzygxtf
+[2023-01-24 02:42:11,175] {subprocess.py:92} INFO - tmpicc261a4
+[2023-01-24 02:42:11,175] {subprocess.py:92} INFO - tmpjgcvfnfh
+[2023-01-24 02:42:11,175] {subprocess.py:92} INFO - tmpnr00lx1m
+[2023-01-24 02:42:11,175] {subprocess.py:92} INFO - tmpnt8gfzgh
+[2023-01-24 02:42:11,175] {subprocess.py:92} INFO - tmpnvc2r2ky
+[2023-01-24 02:42:11,176] {subprocess.py:92} INFO - Confirmación de la NASA, pueden proceder
+[2023-01-24 02:42:11,176] {subprocess.py:96} INFO - Command exited with return code 0
+[2023-01-24 02:42:11,307] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=Respuesta_Nasa, task_id=Leer_Datos_Respuesta_Nasa, execution_date=20230101T005600, start_date=20230124T024210, end_date=20230124T024211
+[2023-01-24 02:42:11,404] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-01-24 02:42:11,547] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

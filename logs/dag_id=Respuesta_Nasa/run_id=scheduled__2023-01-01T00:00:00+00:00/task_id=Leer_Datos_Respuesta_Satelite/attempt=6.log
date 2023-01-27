@@ -1,0 +1,49 @@
+[2023-01-24 03:43:56,961] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Respuesta_Nasa.Leer_Datos_Respuesta_Satelite scheduled__2023-01-01T00:00:00+00:00 [queued]>
+[2023-01-24 03:43:56,974] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Respuesta_Nasa.Leer_Datos_Respuesta_Satelite scheduled__2023-01-01T00:00:00+00:00 [queued]>
+[2023-01-24 03:43:56,974] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-24 03:43:56,974] {taskinstance.py:1377} INFO - Starting attempt 6 of 6
+[2023-01-24 03:43:56,974] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-24 03:43:56,994] {taskinstance.py:1397} INFO - Executing <Task(BashOperator): Leer_Datos_Respuesta_Satelite> on 2023-01-01 00:00:00+00:00
+[2023-01-24 03:43:56,999] {standard_task_runner.py:52} INFO - Started process 2791 to run task
+[2023-01-24 03:43:57,006] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Respuesta_Nasa', 'Leer_Datos_Respuesta_Satelite', 'scheduled__2023-01-01T00:00:00+00:00', '--job-id', '458', '--raw', '--subdir', 'DAGS_FOLDER/00-ETL_spaceX.py', '--cfg-path', '/tmp/tmp2i74x8wo', '--error-file', '/tmp/tmp_hqmdsd7']
+[2023-01-24 03:43:57,008] {standard_task_runner.py:80} INFO - Job 458: Subtask Leer_Datos_Respuesta_Satelite
+[2023-01-24 03:43:57,093] {task_command.py:371} INFO - Running <TaskInstance: Respuesta_Nasa.Leer_Datos_Respuesta_Satelite scheduled__2023-01-01T00:00:00+00:00 [running]> on host fd9891b969b0
+[2023-01-24 03:43:57,179] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=me
+AIRFLOW_CTX_DAG_ID=Respuesta_Nasa
+AIRFLOW_CTX_TASK_ID=Leer_Datos_Respuesta_Satelite
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=6
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-01T00:00:00+00:00
+[2023-01-24 03:43:57,180] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2023-01-24 03:43:57,181] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'ls /tmp && head /tmp/platzi_data_20230101.csv']
+[2023-01-24 03:43:57,193] {subprocess.py:85} INFO - Output:
+[2023-01-24 03:43:57,196] {subprocess.py:92} INFO - ***tmplpr4poy3
+[2023-01-24 03:43:57,197] {subprocess.py:92} INFO - platzi_data_20210101.csv
+[2023-01-24 03:43:57,197] {subprocess.py:92} INFO - platzi_data_{{ds_nodash}}.csv
+[2023-01-24 03:43:57,197] {subprocess.py:92} INFO - pymp-_z20wx4h
+[2023-01-24 03:43:57,197] {subprocess.py:92} INFO - pymp-igsi0xnb
+[2023-01-24 03:43:57,197] {subprocess.py:92} INFO - response_20230101.txt
+[2023-01-24 03:43:57,197] {subprocess.py:92} INFO - response_20230102.txt
+[2023-01-24 03:43:57,197] {subprocess.py:92} INFO - response_20230103.txt
+[2023-01-24 03:43:57,197] {subprocess.py:92} INFO - spacex_20230101.json
+[2023-01-24 03:43:57,198] {subprocess.py:92} INFO - spacex_20230102.json
+[2023-01-24 03:43:57,198] {subprocess.py:92} INFO - spacex_20230103.json
+[2023-01-24 03:43:57,198] {subprocess.py:92} INFO - tmp7htmkt2w
+[2023-01-24 03:43:57,198] {subprocess.py:92} INFO - tmp_hqmdsd7
+[2023-01-24 03:43:57,198] {subprocess.py:92} INFO - tmpnvc2r2ky
+[2023-01-24 03:43:57,198] {subprocess.py:92} INFO - tmpu3_v7je8
+[2023-01-24 03:43:57,198] {subprocess.py:92} INFO - head: cannot open '/tmp/platzi_data_20230101.csv' for reading: No such file or directory
+[2023-01-24 03:43:57,198] {subprocess.py:96} INFO - Command exited with return code 1
+[2023-01-24 03:43:57,213] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 195, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2023-01-24 03:43:57,217] {taskinstance.py:1420} INFO - Marking task as FAILED. dag_id=Respuesta_Nasa, task_id=Leer_Datos_Respuesta_Satelite, execution_date=20230101T000000, start_date=20230124T034356, end_date=20230124T034357
+[2023-01-24 03:43:57,229] {standard_task_runner.py:97} ERROR - Failed to execute job 458 for task Leer_Datos_Respuesta_Satelite (Bash command failed. The command returned a non-zero exit code 1.; 2791)
+[2023-01-24 03:43:57,257] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-01-24 03:43:57,307] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
